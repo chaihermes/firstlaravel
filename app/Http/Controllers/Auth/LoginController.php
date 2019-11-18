@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth; //Onde está localizada. Essa classe pertence a esse local específico. É pra isso que serve o namespace.
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;   //com o namespace não precisa usar a include, pode usar o use, dando o caminho de pastas e a classe.
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
