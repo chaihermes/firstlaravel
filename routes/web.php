@@ -21,3 +21,4 @@ Route::get('/', function () { // o primeiro parâmetro é o que o usuário digit
 
 Route::get('/home', 'HomeController@viewHome');  //quando o usuário digitar home, a rota é HomeController na função viewHome, criada em HomeController. O @ é pra determinar qual método será usado.
 
+Route::get('/cidade', 'CidadeController@viewCidade'); //(1)
