@@ -19,6 +19,15 @@ Route::get('/', function () { // o primeiro parâmetro é o que o usuário digit
     return view('welcome');
 });
 
+
+Route::get('formulario', 'HomeController@exibirFormulario');    //quando for visualizar o formulário, vai pra esse método do controller.
+
+//criando nova rota POST pro formulario
+Route::post('/formulario', 'HomeController@cadastrarFormulario');
+
+
+Route::get('/request/id/{abc?}', 'HomeController@request');   //{abc} é um parâmetro id. O request engloba GET, POST, todas as informações. ? significa que a rota pode receber o parâmetro, não necessariamente deve receber um parâmetro.
+
 Route::get('/home', 'HomeController@viewHome');  //quando o usuário digitar home, a rota é HomeController na função viewHome, criada em HomeController. O @ é pra determinar qual método será usado.
 
 Route::get('/cidade', 'CidadeController@viewCidade'); //(1)

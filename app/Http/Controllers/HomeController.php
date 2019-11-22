@@ -22,4 +22,22 @@ class HomeController extends Controller
 
         return view('home',["listaUsuarios"=>$listaUsuarios]); //está mandando pra view a lista de usuarios. Na home.blade.php vamos fazer um foreach pra listar todos os usuários cadastrados no banco. 
     }
+
+
+    public function request(Request $request, $abc=0){  //Request é uma classe. $request é um objeto.
+        //dd($id);                                    //vai receber um objeto dentro da classe Request.
+                                                    //$id(abc) é o parâmetro da rota.
+        if($abc==0){                                //coloca um valor default pra não dar erro.
+            echo "Passe uma informação!";           //o if valida se realmente é igual a 0.
+        }
+    }
+
+
+    public function exibirFormulario(){
+        return view('formulario');
+    }
+
+    public function cadastrarFormulario(Request $request){      //cria a função cadastrar Formulário.
+        dd($request->nomeUsuario); 
+    }
 }
