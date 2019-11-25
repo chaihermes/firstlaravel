@@ -11,11 +11,13 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+
+     //cria tabelas
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
+        Schema::create('users', function (Blueprint $table) {   //users: nome da tabela //objeto Blueprint: conversa em SQL
+            $table->bigIncrements('id');                        //atributos do objeto table //bigIncrement: primary key e auto_increment
+            $table->string('name');                             //cada atributo cria uma coluna
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -29,6 +31,8 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+
+     //deleta tabelas
     public function down()
     {
         Schema::dropIfExists('users');
